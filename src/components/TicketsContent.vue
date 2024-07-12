@@ -151,11 +151,9 @@
                             @click="decrease"
                             class="arrow-container"
                         >
-                            <img
-                                src="../../public/assets/newarrowLeft.svg"
-                                alt=""
-                                class="arrow"
-                            />
+                        <svg class="arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.56603 0.558058C6.83216 0.802136 6.83216 1.19786 6.56603 1.44194L2.07812 5.55806C1.812 5.80214 1.812 6.19786 2.07813 6.44194L6.56603 10.5581C6.83216 10.8021 6.83216 11.1979 6.56603 11.4419C6.29991 11.686 5.86844 11.686 5.60231 11.4419L1.1144 7.32583C0.316033 6.59359 0.316031 5.40641 1.1144 4.67418L5.60231 0.558058C5.86844 0.313981 6.29991 0.313981 6.56603 0.558058Z" fill="#171625"/>
+</svg>
                         </div>
                         <div
                             class="pageNos"
@@ -174,10 +172,9 @@
                             class="arrow-container"
                             @click="increase"
                         >
-                            <img
-                                src="../../public/assets/newarrowRight.svg"
-                                alt=""
-                            />
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.07459 11.4419C0.808469 11.1979 0.808469 10.8021 1.07459 10.5581L5.5625 6.44194C5.82863 6.19786 5.82863 5.80214 5.5625 5.55806L1.07459 1.44194C0.80847 1.19786 0.80847 0.802137 1.07459 0.558058C1.34072 0.313981 1.77219 0.313981 2.03831 0.558058L6.52622 4.67418C7.32459 5.40641 7.32459 6.59359 6.52622 7.32582L2.03831 11.4419C1.77219 11.686 1.34072 11.686 1.07459 11.4419Z" fill="#171625"/>
+</svg>
                         </div>
                     </div>
                 </div>

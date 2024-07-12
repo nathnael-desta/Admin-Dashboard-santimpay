@@ -1,0 +1,431 @@
+[
+  {
+   "email" : "abebebikila@gmail.com",
+   "phoneNumber": "+251911223344",
+   "password": "admin",
+   "name": "Abebe Bikila",
+   "totalEvents": 135,
+   "eventsActive": 62,
+   "eventsInactive": 23,
+   "totalTickets1": 1567,
+   "tickets1Active": 62,
+   "tickets1Inactive": 23,
+   "totalTickets2": 89,
+   "tickets2Active": 62,
+   "tickets2Inactive": 23,
+   "allTickets": 
+    [
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Tech Conference 2024",
+        "contactName": "John Doe",
+        "phoneNumber": "1234567890",
+        "maxTickets": 500,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Convention Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Art & Craft Expo",
+        "contactName": "Jane Smith",
+        "phoneNumber": "0987654321",
+        "maxTickets": 300,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Art Gallery",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Music Festival",
+        "contactName": "Mike Johnson",
+        "phoneNumber": "1122334455",
+        "maxTickets": 1000,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Open Air Theatre",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Food Carnival",
+        "contactName": "Emily Davis",
+        "phoneNumber": "2233445566",
+        "maxTickets": 750,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "City Park",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Book Fair",
+        "contactName": "Chris Brown",
+        "phoneNumber": "3344556677",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Library Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Startup Pitch Event",
+        "contactName": "Sarah Wilson",
+        "phoneNumber": "4455667788",
+        "maxTickets": 200,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Tech Hub",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Charity Run",
+        "contactName": "David Lee",
+        "phoneNumber": "5566778899",
+        "maxTickets": 1500,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Downtown",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Yoga Workshop",
+        "contactName": "Anna Martinez",
+        "phoneNumber": "6677889900",
+        "maxTickets": 250,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Community Center",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Science Fair",
+        "contactName": "Brian Scott",
+        "phoneNumber": "7788990011",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "University Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Business Meetup",
+        "contactName": "Laura Garcia",
+        "phoneNumber": "8899001122",
+        "maxTickets": 350,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Conference Room A",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Tech Conference 2024",
+        "contactName": "John Doe",
+        "phoneNumber": "1234567890",
+        "maxTickets": 500,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Convention Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Art & Craft Expo",
+        "contactName": "Jane Smith",
+        "phoneNumber": "0987654321",
+        "maxTickets": 300,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Art Gallery",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Music Festival",
+        "contactName": "Mike Johnson",
+        "phoneNumber": "1122334455",
+        "maxTickets": 1000,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Open Air Theatre",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Food Carnival",
+        "contactName": "Emily Davis",
+        "phoneNumber": "2233445566",
+        "maxTickets": 750,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "City Park",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Book Fair",
+        "contactName": "Chris Brown",
+        "phoneNumber": "3344556677",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Library Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Startup Pitch Event",
+        "contactName": "Sarah Wilson",
+        "phoneNumber": "4455667788",
+        "maxTickets": 200,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Tech Hub",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Charity Run",
+        "contactName": "David Lee",
+        "phoneNumber": "5566778899",
+        "maxTickets": 1500,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Downtown",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Yoga Workshop",
+        "contactName": "Anna Martinez",
+        "phoneNumber": "6677889900",
+        "maxTickets": 250,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Community Center",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Science Fair",
+        "contactName": "Brian Scott",
+        "phoneNumber": "7788990011",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "University Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Business Meetup",
+        "contactName": "Laura Garcia",
+        "phoneNumber": "8899001122",
+        "maxTickets": 350,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Conference Room A",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Gaming Convention",
+        "contactName": "Michael Anderson",
+        "phoneNumber": "9900112233",
+        "maxTickets": 800,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Exhibition Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Film Festival",
+        "contactName": "Emma Thompson",
+        "phoneNumber": "1010101010",
+        "maxTickets": 700,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Cinema Hall",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Health & Wellness Fair",
+        "contactName": "Olivia Taylor",
+        "phoneNumber": "1212121212",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Fitness Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Coding Bootcamp",
+        "contactName": "Daniel Harris",
+        "phoneNumber": "1313131313",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
+        "location": "Tech Lab",
+        "status": "expired"
+      }
+    
+   ],
+   "allTickets2": [
+      {
+          "ticketID": "12223323",
+          "ticketName": "Saq Be Saq",
+          "phoneNumber": "0982374628",
+          "noOfTickets": "345",
+          "status": "active"
+      },
+      {
+          "ticketID": "32213445",
+          "ticketName": "Event Alpha",
+          "phoneNumber": "0981234567",
+          "noOfTickets": "200",
+          "status": "expired"
+      },
+      {
+          "ticketID": "52345678",
+          "ticketName": "Concert Beta",
+          "phoneNumber": "0976543210",
+          "noOfTickets": "500",
+          "status": "active"
+      },
+      {
+          "ticketID": "73456789",
+          "ticketName": "Conference Gamma",
+          "phoneNumber": "0965432109",
+          "noOfTickets": "150",
+          "status": "expired"
+      },
+      {
+          "ticketID": "94567890",
+          "ticketName": "Festival Delta",
+          "phoneNumber": "0954321098",
+          "noOfTickets": "250",
+          "status": "active"
+      },
+      {
+          "ticketID": "15678901",
+          "ticketName": "Seminar Epsilon",
+          "phoneNumber": "0943210987",
+          "noOfTickets": "300",
+          "status": "expired"
+      },
+      {
+          "ticketID": "26789012",
+          "ticketName": "Workshop Zeta",
+          "phoneNumber": "0932109876",
+          "noOfTickets": "400",
+          "status": "active"
+      },
+      {
+          "ticketID": "37890123",
+          "ticketName": "Meetup Eta",
+          "phoneNumber": "0921098765",
+          "noOfTickets": "275",
+          "status": "expired"
+      },
+      {
+          "ticketID": "48901234",
+          "ticketName": "Webinar Theta",
+          "phoneNumber": "0910987654",
+          "noOfTickets": "350",
+          "status": "active"
+      },
+      {
+          "ticketID": "59012345",
+          "ticketName": "Hackathon Iota",
+          "phoneNumber": "0909876543",
+          "noOfTickets": "600",
+          "status": "expired"
+      },
+      {
+          "ticketID": "60123456",
+          "ticketName": "Expo Kappa",
+          "phoneNumber": "0898765432",
+          "noOfTickets": "700",
+          "status": "active"
+      },
+      {
+          "ticketID": "71234567",
+          "ticketName": "Show Lambda",
+          "phoneNumber": "0887654321",
+          "noOfTickets": "100",
+          "status": "expired"
+      },
+      {
+          "ticketID": "82345678",
+          "ticketName": "Symposium Mu",
+          "phoneNumber": "0876543210",
+          "noOfTickets": "450",
+          "status": "active"
+      },
+      {
+          "ticketID": "93456789",
+          "ticketName": "Talk Nu",
+          "phoneNumber": "0865432109",
+          "noOfTickets": "600",
+          "status": "expired"
+      },
+      {
+          "ticketID": "04567890",
+          "ticketName": "Lecture Xi",
+          "phoneNumber": "0854321098",
+          "noOfTickets": "250",
+          "status": "active"
+      },
+      {
+          "ticketID": "15678901",
+          "ticketName": "Reading Omicron",
+          "phoneNumber": "0843210987",
+          "noOfTickets": "275",
+          "status": "expired"
+      },
+      {
+          "ticketID": "26789012",
+          "ticketName": "Roundtable Pi",
+          "phoneNumber": "0832109876",
+          "noOfTickets": "300",
+          "status": "active"
+      },
+      {
+          "ticketID": "37890123",
+          "ticketName": "Panel Rho",
+          "phoneNumber": "0821098765",
+          "noOfTickets": "400",
+          "status": "expired"
+      },
+      {
+          "ticketID": "48901234",
+          "ticketName": "Forum Sigma",
+          "phoneNumber": "0810987654",
+          "noOfTickets": "500",
+          "status": "active"
+      },
+      {
+          "ticketID": "59012345",
+          "ticketName": "Summit Tau",
+          "phoneNumber": "0809876543",
+          "noOfTickets": "350",
+          "status": "expired"
+      },
+      {
+          "ticketID": "60123456",
+          "ticketName": "Rally Upsilon",
+          "phoneNumber": "0798765432",
+          "noOfTickets": "450",
+          "status": "active"
+      },
+      {
+          "ticketID": "71234567",
+          "ticketName": "Gathering Phi",
+          "phoneNumber": "0787654321",
+          "noOfTickets": "600",
+          "status": "expired"
+      },
+      {
+          "ticketID": "82345678",
+          "ticketName": "Celebration Chi",
+          "phoneNumber": "0776543210",
+          "noOfTickets": "250",
+          "status": "active"
+      },
+      {
+          "ticketID": "93456789",
+          "ticketName": "Party Psi",
+          "phoneNumber": "0765432109",
+          "noOfTickets": "275",
+          "status": "expired"
+      }  
+  ]
+  }
+]
