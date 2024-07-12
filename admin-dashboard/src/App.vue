@@ -37,7 +37,6 @@ export default {
     },
     computed: {
       user() {
-        console.log(this.users[this.userIndex])
         return this.users[this.userIndex];
       }
     },
@@ -63,10 +62,25 @@ export default {
             }
           })
         },
-        editUser(index, option) {
+        editUser(index, option, edit) {
           if (option === "delete") {
-            this.users.splice(index,1);
+            this.user.allTickets.splice(index,1);
+            return;
           }
+
+          if (option === "edit") {
+            this.user.allTickets.splice(index,1,{
+        "image": "./assets/image.svg",
+        "eventName": edit.eventName,
+        "contactName": edit.contactName,
+        "phoneNumber": edit.phoneNumber,
+        "maxTickets": edit.maxTickets,
+        "description": edit.description,
+        "location": edit.location,
+        "status": edit.status
+      });
+          }
+
         }
     },
 };

@@ -21,7 +21,7 @@
         "contactName": "John Doe",
         "phoneNumber": "1234567890",
         "maxTickets": 500,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Convention Center",
         "status": "active"
       },
@@ -31,7 +31,7 @@
         "contactName": "Jane Smith",
         "phoneNumber": "0987654321",
         "maxTickets": 300,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Art Gallery",
         "status": "expired"
       },
@@ -41,7 +41,7 @@
         "contactName": "Mike Johnson",
         "phoneNumber": "1122334455",
         "maxTickets": 1000,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Open Air Theatre",
         "status": "active"
       },
@@ -51,7 +51,7 @@
         "contactName": "Emily Davis",
         "phoneNumber": "2233445566",
         "maxTickets": 750,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "City Park",
         "status": "expired"
       },
@@ -61,7 +61,7 @@
         "contactName": "Chris Brown",
         "phoneNumber": "3344556677",
         "maxTickets": 400,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Library Hall",
         "status": "active"
       },
@@ -71,7 +71,7 @@
         "contactName": "Sarah Wilson",
         "phoneNumber": "4455667788",
         "maxTickets": 200,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Tech Hub",
         "status": "expired"
       },
@@ -81,7 +81,7 @@
         "contactName": "David Lee",
         "phoneNumber": "5566778899",
         "maxTickets": 1500,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Downtown",
         "status": "active"
       },
@@ -91,7 +91,7 @@
         "contactName": "Anna Martinez",
         "phoneNumber": "6677889900",
         "maxTickets": 250,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Community Center",
         "status": "expired"
       },
@@ -101,7 +101,7 @@
         "contactName": "Brian Scott",
         "phoneNumber": "7788990011",
         "maxTickets": 600,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "University Hall",
         "status": "active"
       },
@@ -111,7 +111,7 @@
         "contactName": "Laura Garcia",
         "phoneNumber": "8899001122",
         "maxTickets": 350,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Conference Room A",
         "status": "expired"
       },
@@ -121,7 +121,7 @@
         "contactName": "John Doe",
         "phoneNumber": "1234567890",
         "maxTickets": 500,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Convention Center",
         "status": "active"
       },
@@ -131,7 +131,7 @@
         "contactName": "Jane Smith",
         "phoneNumber": "0987654321",
         "maxTickets": 300,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Art Gallery",
         "status": "expired"
       },
@@ -141,7 +141,7 @@
         "contactName": "Mike Johnson",
         "phoneNumber": "1122334455",
         "maxTickets": 1000,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Open Air Theatre",
         "status": "active"
       },
@@ -151,7 +151,7 @@
         "contactName": "Emily Davis",
         "phoneNumber": "2233445566",
         "maxTickets": 750,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "City Park",
         "status": "expired"
       },
@@ -161,7 +161,7 @@
         "contactName": "Chris Brown",
         "phoneNumber": "3344556677",
         "maxTickets": 400,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Library Hall",
         "status": "active"
       },
@@ -171,7 +171,7 @@
         "contactName": "Sarah Wilson",
         "phoneNumber": "4455667788",
         "maxTickets": 200,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Tech Hub",
         "status": "expired"
       },
@@ -181,7 +181,7 @@
         "contactName": "David Lee",
         "phoneNumber": "5566778899",
         "maxTickets": 1500,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Downtown",
         "status": "active"
       },
@@ -191,7 +191,7 @@
         "contactName": "Anna Martinez",
         "phoneNumber": "6677889900",
         "maxTickets": 250,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Community Center",
         "status": "expired"
       },
@@ -201,7 +201,7 @@
         "contactName": "Brian Scott",
         "phoneNumber": "7788990011",
         "maxTickets": 600,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "University Hall",
         "status": "active"
       },
@@ -211,7 +211,7 @@
         "contactName": "Laura Garcia",
         "phoneNumber": "8899001122",
         "maxTickets": 350,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Conference Room A",
         "status": "expired"
       },
@@ -221,7 +221,7 @@
         "contactName": "Michael Anderson",
         "phoneNumber": "9900112233",
         "maxTickets": 800,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Exhibition Center",
         "status": "active"
       },
@@ -231,7 +231,7 @@
         "contactName": "Emma Thompson",
         "phoneNumber": "1010101010",
         "maxTickets": 700,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Cinema Hall",
         "status": "expired"
       },
@@ -241,7 +241,7 @@
         "contactName": "Olivia Taylor",
         "phoneNumber": "1212121212",
         "maxTickets": 600,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Fitness Center",
         "status": "active"
       },
@@ -251,7 +251,7 @@
         "contactName": "Daniel Harris",
         "phoneNumber": "1313131313",
         "maxTickets": 400,
-        "description": "Lorem ipsum dolor sit amet...",
+        "description": "Lorem ipsum dolor sit amet asdfsdaf asf asdf asdf  asfd  asfd  a sfdsfda  adsf...",
         "location": "Tech Lab",
         "status": "expired"
       }

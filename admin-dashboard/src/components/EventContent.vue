@@ -96,7 +96,7 @@
                     </svg>
                     <div class="title">Expired Tickets</div>
                 </div>
-                <div class="bottom">{{ user.eventsInactive}}</div>
+                <div class="bottom">{{ user.eventsInactive }}</div>
             </div>
         </div>
         <div class="bottom">
@@ -120,24 +120,46 @@
                                 alt=""
                             />
                         </td>
-                        <td v-if="index >= pageNo && index < pageNo + 5" >{{ticket.eventName}}</td>
-                        <td v-if="index >= pageNo && index < pageNo + 5">{{ticket.contactName}}</td>
-                        <td v-if="index >= pageNo && index < pageNo + 5">{{ticket.phoneNumber}}</td>
-                        <td v-if="index >= pageNo && index < pageNo + 5">{{ticket.maxTickets}}</td>
                         <td v-if="index >= pageNo && index < pageNo + 5">
-                          {{ticket.description}}<span class="colored"
-                                >More</span
-                            >
+                            {{ ticket.eventName }}
                         </td>
-                        <td v-if="index >= pageNo && index < pageNo + 5">{{ticket.location}}</td>
                         <td v-if="index >= pageNo && index < pageNo + 5">
-                            <span 
-                              class="statusactive" 
-                              :class="{
-  'statusactive': ticket.status == 'active',
-  'statusexpired': ticket.status == 'expired'
-}"
-                              >{{ticket.status}}</span>
+                            {{ ticket.contactName }}
+                        </td>
+                        <td v-if="index >= pageNo && index < pageNo + 5">
+                            {{ ticket.phoneNumber }}
+                        </td>
+                        <td v-if="index >= pageNo && index < pageNo + 5">
+                            {{ ticket.maxTickets }}
+                        </td>
+                        <td v-if="index >= pageNo && index < pageNo + 5">
+                            {{ ticket.description.substring(0, 26) }}
+                            <span
+                                class="more"
+                                :class="{
+                                    notVisible: !(
+                                        ticket.description.length > 26
+                                    ),
+                                }"
+                            >
+                                ...<span class="colored">More</span>
+                                <span class="popout">
+                                    {{ ticket.description }}</span
+                                >
+                            </span>
+                        </td>
+                        <td v-if="index >= pageNo && index < pageNo + 5">
+                            {{ ticket.location }}
+                        </td>
+                        <td v-if="index >= pageNo && index < pageNo + 5">
+                            <span
+                                class="statusactive"
+                                :class="{
+                                    statusactive: ticket.status == 'active',
+                                    statusexpired: ticket.status == 'expired',
+                                }"
+                                >{{ ticket.status }}</span
+                            >
                             <div
                                 class="img-container"
                                 @click="clickOptions(index)"
@@ -150,16 +172,24 @@
                             </div>
                             <div
                                 class="options"
-                                :class="{ notVisible: !(clickedOptions === index) }"
+                                :class="{
+                                    notVisible: !(clickedOptions === index),
+                                }"
                             >
-                                <div class="edit">
+                                <div
+                                    class="edit"
+                                    @click="turnEditOn"
+                                >
                                     <img
                                         src="../../public/assets/edit.svg"
                                         alt=""
                                     />
                                     <div class="text">Edit</div>
                                 </div>
-                                <div class="delete">
+                                <div
+                                    class="delete"
+                                    @click="editUser(index, 'delete')"
+                                >
                                     <img
                                         src="../../public/assets/trash.svg"
                                         alt=""
@@ -167,273 +197,148 @@
                                     <div class="text">Delete</div>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td>
-                            <img
-                                src="../../public/assets/image.svg"
-                                alt=""
-                            />
-                        </td>
-                        <td>Saq Be Saq Event</td>
-                        <td>Abebe Bikila</td>
-                        <td>0998765432</td>
-                        <td>1000</td>
-                        <td>
-                            Lorem ipsum dolor sit amet...<span class="colored"
-                                >More</span
-                            >
-                        </td>
-                        <td>Millennium Hall</td>
-                        <td>
-                            <span class="status-active">Active</span>
                             <div
-                                class="img-container"
-                                @click="clickOptions(2)"
-                                :class="{ clicked: clickedOptions === 2 }"
-                            >
-                                <img
-                                    src="../../public/assets/threeDots.svg"
-                                    alt=""
-                                />
-                            </div>
-                            <div
-                                class="options"
-                                :class="{ notVisible: !(clickedOptions === 2) }"
-                            >
-                                <div class="edit">
-                                    <img
-                                        src="../../public/assets/edit.svg"
-                                        alt=""
+                            class="edit-modal"
+                            :class="{ notDisplay: index != pageNo || !editOn }"
+                        >
+                            <div class="edit-container">
+                                <div class="event-name">
+                                    <label for="">Event Name</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.eventName"
                                     />
-                                    <div class="text">Edit</div>
                                 </div>
-                                <div class="delete">
-                                    <img
-                                        src="../../public/assets/trash.svg"
-                                        alt=""
+                                <div class="contact-name">
+                                    <label for="">Contact Name</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.contactName"
                                     />
-                                    <div class="text">Delete</div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img
-                                src="../../public/assets/image.svg"
-                                alt=""
-                            />
-                        </td>
-                        <td>Saq Be Saq Event</td>
-                        <td>Abebe Bikila</td>
-                        <td>0998765432</td>
-                        <td>1000</td>
-                        <td>
-                            Lorem ipsum dolor sit amet...<span class="colored"
-                                >More</span
-                            >
-                        </td>
-                        <td>Millennium Hall</td>
-                        <td>
-                            <span class="status-expired">Expired</span>
-                            <div
-                                class="img-container"
-                                @click="clickOptions(3)"
-                                :class="{ clicked: clickedOptions === 3 }"
-                            >
-                                <img
-                                    src="../../public/assets/threeDots.svg"
-                                    alt=""
-                                />
-                            </div>
-                            <div
-                                class="options"
-                                :class="{ notVisible: !(clickedOptions === 3) }"
-                            >
-                                <div class="edit">
-                                    <img
-                                        src="../../public/assets/edit.svg"
-                                        alt=""
+                                <div class="phone-number">
+                                    <label for="">Phone Number</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.phoneNumber"
                                     />
-                                    <div class="text">Edit</div>
                                 </div>
-                                <div class="delete">
-                                    <img
-                                        src="../../public/assets/trash.svg"
-                                        alt=""
+                                <div class="max-tickets">
+                                    <label for="">Max Tickets</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.maxTickets"
                                     />
-                                    <div class="text">Delete</div>
+                                </div>
+                                <div class="description">
+                                    <label for="">Description</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.description"
+                                    />
+                                </div>
+                                <div class="location">
+                                    <label for="">Location</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.location"
+                                    />
+                                </div>
+                                <div class="status">
+                                    <label for="">Status</label>
+                                    <input
+                                        type="text"
+                                        v-model="edit.status"
+                                    />
+                                </div>
+                                <div
+                                    class="submit"
+                                    :class="{ notFully: notFilled }"
+                                    @click="makeEdit(index)"
+                                >
+                                    Submit
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img
-                                src="../../public/assets/image.svg"
-                                alt=""
-                            />
-                        </td>
-                        <td>Saq Be Saq Event</td>
-                        <td>Abebe Bikila</td>
-                        <td>0998765432</td>
-                        <td>1000</td>
-                        <td>
-                            Lorem ipsum dolor sit amet...<span class="colored"
-                                >More</span
-                            >
-                        </td>
-                        <td>Millennium Hall</td>
-                        <td>
-                            <span class="status-active">Active</span>
-                            <div
-                                class="img-container"
-                                @click="clickOptions(4)"
-                                :class="{ clicked: clickedOptions === 4 }"
-                            >
-                                <img
-                                    src="../../public/assets/threeDots.svg"
-                                    alt=""
-                                />
-                            </div>
-                            <div
-                                class="options"
-                                :class="{ notVisible: !(clickedOptions === 4) }"
-                            >
-                                <div class="edit">
-                                    <img
-                                        src="../../public/assets/edit.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Edit</div>
-                                </div>
-                                <div class="delete">
-                                    <img
-                                        src="../../public/assets/trash.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Delete</div>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img
-                                src="../../public/assets/image.svg"
-                                alt=""
-                            />
-                        </td>
-                        <td>Saq Be Saq Event</td>
-                        <td>Abebe Bikila</td>
-                        <td>0998765432</td>
-                        <td>1000</td>
-                        <td>
-                            Lorem ipsum dolor sit amet...<span class="colored"
-                                >More</span
-                            >
-                        </td>
-                        <td>Millennium Hall</td>
-                        <td>
-                            <span class="status-active">Active</span>
-                            <div
-                                class="img-container"
-                                @click="clickOptions(5)"
-                                :class="{ clicked: clickedOptions === 5 }"
-                            >
-                                <img
-                                    src="../../public/assets/threeDots.svg"
-                                    alt=""
-                                />
-                            </div>
+                        </div>
 
-                            <div
-                                class="options"
-                                :class="{ notVisible: !(clickedOptions === 5) }"
-                            >
-                                <div class="edit">
-                                    <img
-                                        src="../../public/assets/edit.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Edit</div>
-                                </div>
-                                <div class="delete">
-                                    <img
-                                        src="../../public/assets/trash.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Delete</div>
-                                </div>
-                            </div>
                         </td>
-                    </tr> -->
+                        
+                    </tr>
                 </table>
                 <div class="pages">
                     <div class="left">
                         <div class="showing">Showing Page</div>
                         <div class="page-number">{{ pageNo + 1 }}</div>
-                        <div class="out-of">Out of {{ totalNumberOfPages + 1 }}</div>
+                        <div class="out-of">
+                            Out of {{ totalNumberOfPages + 1 }}
+                        </div>
                     </div>
                     <div class="right">
-                      <div 
-                      @click="decrease"
-                      class="arrow-container"
-                      
-                      >
-                        <img
-                            src="../../public/assets/newarrowLeft.svg"
-                            alt=""
-                            
-                            class="arrow"
-                        />
-                      </div>
-                        <div 
-                          class="page"
-                          @click="changePageNo(0)"
-                          :class="{selected:pageNo == 0}"
-                        >1</div>
-                        <div 
-                          class="page"
-                          @click="changePageNo(1)"
-                          :class="{selected:pageNo == 1}"
-                        >2</div>
-                        <div 
-                          class="page"
-                          @click="changePageNo(2)"
-                          :class="{selected:pageNo == 2}"
-                        >3</div>
-                        <div 
-                          class="page"
-                          @click="changePageNo(3)"
-                          :class="{selected:pageNo == 3}"
-                        >4</div>
-                        <div 
-                          class="page"
-                          :class="{selected:pageNo == 4}"
-                          
-                          @click="changePageNo(4)"
-                        >5</div>
-
-                        <div class="arrow-container" @click="increase">
-                          <img
-                            src="../../public/assets/newarrowRight.svg"
-                            alt=""
-                            
-                        />
+                        <div
+                            @click="decrease"
+                            class="arrow-container"
+                        >
+                            <img
+                                src="../../public/assets/newarrowLeft.svg"
+                                alt=""
+                                class="arrow"
+                            />
                         </div>
-                        
+                        <div
+                            class="page"
+                            @click="changePageNo(0)"
+                            :class="{ selected: pageNo == 0 }"
+                        >
+                            1
+                        </div>
+                        <div
+                            class="page"
+                            @click="changePageNo(1)"
+                            :class="{ selected: pageNo == 1 }"
+                        >
+                            2
+                        </div>
+                        <div
+                            class="page"
+                            @click="changePageNo(2)"
+                            :class="{ selected: pageNo == 2 }"
+                        >
+                            3
+                        </div>
+                        <div
+                            class="page"
+                            @click="changePageNo(3)"
+                            :class="{ selected: pageNo == 3 }"
+                        >
+                            4
+                        </div>
+                        <div
+                            class="page"
+                            :class="{ selected: pageNo == 4 }"
+                            @click="changePageNo(4)"
+                        >
+                            5
+                        </div>
+
+                        <div
+                            class="arrow-container"
+                            @click="increase"
+                        >
+                            <img
+                                src="../../public/assets/newarrowRight.svg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div 
-      class="modal"
-      :class="{notVisible: !modalOn}"  
-      >
+
+    <div
+        class="modal"
+        :class="{ notVisible: !modalOn }"
+    >
         <div class="container">
             <div class="top">
                 <div class="text">Create New Event</div>
@@ -517,10 +422,12 @@
                     <div class="event-image normal">
                         <label for="event-image-input">Event Image</label>
                         <div class="file-container">
-                          <div class="inner">
-                            <div class="text">Upload File</div>
-                            <div class="select">Select a file or drag and drop here</div>
-                          </div>
+                            <div class="inner">
+                                <div class="text">Upload File</div>
+                                <div class="select">
+                                    Select a file or drag and drop here
+                                </div>
+                            </div>
                         </div>
                         <input
                             type="file"
@@ -543,21 +450,42 @@
 </template>
 
 <script>
-import { useAttrs } from 'vue';
+import { useAttrs } from "vue";
 
 export default {
-  props: ["user", "editUser"],
+    props: ["user", "editUser"],
     data() {
         return {
             clickedOptions: NaN,
             modalOn: false,
-            pageNo: 2,
+            pageNo: 0,
+            editOn: false,
+            edit: {
+                eventName: "",
+                contactName: "",
+                phoneNumber: "",
+                maxTickets: "",
+                description: "",
+                location: "",
+                status: "",
+            },
         };
     },
     computed: {
-      totalNumberOfPages() {
-        return Math.floor(this.user.allTickets.length / 5)
-      }
+        totalNumberOfPages() {
+            return Math.floor(this.user.allTickets.length / 5);
+        },
+        notFilled() {
+            return (
+                !this.edit.eventName ||
+                !this.edit.contactName ||
+                !this.edit.phoneNumber ||
+                !this.edit.maxTickets ||
+                !this.edit.description ||
+                !this.edit.location ||
+                !this.edit.status
+            );
+        },
     },
     methods: {
         clickOptions(no) {
@@ -568,18 +496,36 @@ export default {
             }
         },
         changePageNo(no) {
-          this.pageNo = no;
+            this.pageNo = no;
         },
         decrease() {
-          if (this.pageNo > 0) {
-            this.pageNo -= 1;
-          }
+            if (this.pageNo > 0) {
+                this.pageNo -= 1;
+            }
         },
         increase() {
-          if (this.pageNo < this.totalNumberOfPages) {
-            this.pageNo += 1;
-          }
-        }
+            if (this.pageNo < this.totalNumberOfPages) {
+                this.pageNo += 1;
+            }
+        },
+        makeEdit(index) {
+            if (!this.notFilled) {
+                this.editUser(index, "edit", {
+                    eventName: this.edit.eventName,
+                    contactName: this.edit.contactName,
+                    phoneNumber: this.edit.phoneNumber,
+                    maxTickets: this.edit.maxTickets,
+                    description: this.edit.description,
+                    location: this.edit.location,
+                    status: this.edit.status,
+                });
+
+                this.editOn = false;
+            }
+        },
+        turnEditOn() {
+            this.editOn = true;
+        },
     },
 };
 </script>
