@@ -580,6 +580,7 @@ body {
             flex: 5.67;
             display: flex;
             flex-direction: column;
+            justify-content: start;
 
             .table-container {
                 flex: 6.5;
@@ -723,36 +724,33 @@ body {
                 }
 
                 .right {
-                  display: flex;
-                  align-items: center;
-
-                  .arrow-container {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                  }
-                    
+
+                    .arrow-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
 
                     .pageNos {
-                      display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    align-items: center;
-
-                      & > div {
-                        width: 28px;
-                        height: 28px;
                         display: flex;
-                        justify-content: center;
                         align-items: center;
-                    }
+                        gap: 10px;
+                        align-items: center;
 
-                    .page {
-                        cursor: pointer;
-                    }
-                    }
+                        & > div {
+                            width: 28px;
+                            height: 28px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
 
-                    
+                        .page {
+                            cursor: pointer;
+                        }
+                    }
 
                     .selected {
                         background-color: rgba(211, 175, 53, 0.4);
@@ -794,7 +792,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
 
         .top {
             font-weight: 700;
@@ -1050,4 +1047,25 @@ body {
 
 .more:hover .popout {
     visibility: visible;
+}
+
+.notActive {
+    opacity: 0.6;
+}
+
+.ticketStatus {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+.location-content,
+.users-content {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
 }

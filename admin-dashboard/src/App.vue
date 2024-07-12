@@ -1,13 +1,14 @@
 <template v-if="users">
     <login-page
-      :current-input="currentInput" 
-      :check-user= "checkUser"
-      v-if="pageNo == 0"
+        :current-input="currentInput"
+        :check-user="checkUser"
+        v-if="pageNo == 0"
     ></login-page>
     <dashboard
-      v-if="user"
-      :user="user"
-      :edit-user="editUser"
+        v-if="user && pageNo == 1"
+        :user="user"
+        :edit-user="editUser"
+        :add-event="addEvent"
     ></dashboard>
 </template>
 
@@ -19,26 +20,26 @@ export default {
     name: "App",
     components: {
         LoginPage,
-        Dashboard
+        Dashboard,
     },
     data() {
         return {
             users: [],
             currentInput: {
-              accountName: "",
-              accountPassword: ""
+                accountName: "",
+                accountPassword: "",
             },
             userIndex: 0,
-            pageNo: 1
+            pageNo: 0,
         };
     },
     created() {
-      this.getPages();
+        this.getPages();
     },
     computed: {
-      user() {
-        return this.users[this.userIndex];
-      }
+        user() {
+            return this.users[this.userIndex];
+        },
     },
     methods: {
         async getPages() {
@@ -48,40 +49,47 @@ export default {
             this.users = data;
         },
         checkUser(name, pass) {
-          this.users.forEach((user, index) => {
-            let correctInput = false;
-            if ((user.email == name || user.phoneNumber == name) && user.password == pass) {
-              this.userIndex = index;
-              correctInput = true;
-            }
+            this.users.forEach((user, index) => {
+                let correctInput = false;
+                if (
+                    (user.email == name || user.phoneNumber == name) &&
+                    user.password == pass
+                ) {
+                    this.userIndex = index;
+                    correctInput = true;
+                }
 
-            if(!correctInput) {
-              alert("incorrect input")
-            } else {
-              this.pageNo = 1;
-            }
-          })
+                if (!correctInput) {
+                    alert("incorrect input");
+                } else {
+                    this.pageNo = 1;
+                }
+            });
         },
         editUser(index, option, edit) {
-          if (option === "delete") {
-            this.user.allTickets.splice(index,1);
-            return;
-          }
+            if (option === "delete") {
+                this.user.allTickets.splice(index, 1);
+                return;
+            }
 
-          if (option === "edit") {
-            this.user.allTickets.splice(index,1,{
-        "image": "./assets/image.svg",
-        "eventName": edit.eventName,
-        "contactName": edit.contactName,
-        "phoneNumber": edit.phoneNumber,
-        "maxTickets": edit.maxTickets,
-        "description": edit.description,
-        "location": edit.location,
-        "status": edit.status
-      });
-          }
-
-        }
+            if (option === "edit") {
+                this.user.allTickets.splice(index, 1, {
+                    image: "./assets/image.svg",
+                    eventName: edit.eventName,
+                    contactName: edit.contactName,
+                    phoneNumber: edit.phoneNumber,
+                    maxTickets: edit.maxTickets,
+                    description: edit.description,
+                    location: edit.location,
+                    status: edit.status,
+                });
+            }
+        },
+        addEvent(dataObj) {
+            console.log(this.user.allTickets);
+            this.user.allTickets.push(dataObj);
+            console.log(this.user.allTickets);
+        },
     },
 };
 </script>

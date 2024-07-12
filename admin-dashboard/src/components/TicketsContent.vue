@@ -1,17 +1,7 @@
 <template>
     <div class="event-content">
         <div class="top">
-            <div class="title">Events</div>
-            <div
-                class="create-button"
-                @click="showModal"
-            >
-                <img
-                    src="../../public/assets/add.svg"
-                    alt=""
-                />
-                <div class="text">Create Event</div>
-            </div>
+            <div class="title">Tickets</div>
         </div>
         <div class="middle">
             <div class="total">
@@ -103,58 +93,40 @@
             </div>
         </div>
         <div class="bottom">
-            <div class="title">All Events</div>
+            <div class="title">All Tickets</div>
             <div class="table">
                 <table class="table-container">
                     <tr class="columns">
-                        <th>Image</th>
-                        <th>Event Name</th>
-                        <th>Contact Name</th>
+                        <th>Ticket ID</th>
+                        <th>Ticket Name</th>
                         <th>Phone Number</th>
-                        <th>Max Tickets</th>
-                        <th>Description</th>
-                        <th>Location</th>
-                        <th>Status</th>
+                        <th>Number Of Tickets</th>
+                        <th class="ticketStatus">Status</th>
                     </tr>
-                    <tr v-for="(ticket, index) in user.allTickets">
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            <img
-                                :src="`${ticket.image}`"
-                                alt=""
-                            />
+                    <tr v-for="(ticket, index) in user.allTickets2">
+                        <td
+                            v-if="index >= pageNo * 5 && index < pageNo * 5 + 5"
+                        >
+                            {{ ticket.ticketID }}
                         </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            {{ ticket.eventName }}
+                        <td
+                            v-if="index >= pageNo * 5 && index < pageNo * 5 + 5"
+                        >
+                            {{ ticket.ticketName }}
                         </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            {{ ticket.contactName }}
-                        </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
+                        <td
+                            v-if="index >= pageNo * 5 && index < pageNo * 5 + 5"
+                        >
                             {{ ticket.phoneNumber }}
                         </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            {{ ticket.maxTickets }}
+                        <td
+                            v-if="index >= pageNo * 5 && index < pageNo * 5 + 5"
+                        >
+                            {{ ticket.noOfTickets }}
                         </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            {{ ticket.description.substring(0, 26) }}
-                            <span
-                                class="more"
-                                :class="{
-                                    notVisible: !(
-                                        ticket.description.length > 26
-                                    ),
-                                }"
-                            >
-                                ...<span class="colored">More</span>
-                                <span class="popout">
-                                    {{ ticket.description }}</span
-                                >
-                            </span>
-                        </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
-                            {{ ticket.location }}
-                        </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
+                        <td
+                            v-if="index >= pageNo * 5 && index < pageNo * 5 + 5" 
+                        >
                             <span
                                 class="statusactive"
                                 :class="{
@@ -163,117 +135,6 @@
                                 }"
                                 >{{ ticket.status }}</span
                             >
-                            <div
-                                class="img-container"
-                                @click="clickOptions(index)"
-                                :class="{ clicked: clickedOptions === index }"
-                            >
-                                <img
-                                    src="../../public/assets/threeDots.svg"
-                                    alt=""
-                                />
-                            </div>
-                            <div
-                                class="options"
-                                :class="{
-                                    notVisible: !(clickedOptions === index),
-                                }"
-                            >
-                                <div
-                                    class="edit"
-                                    @click="turnEditOn"
-                                >
-                                    <img
-                                        src="../../public/assets/edit.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Edit</div>
-                                </div>
-                                <div
-                                    class="delete"
-                                    @click="editUser(index, 'delete')"
-                                >
-                                    <img
-                                        src="../../public/assets/trash.svg"
-                                        alt=""
-                                    />
-                                    <div class="text">Delete</div>
-                                </div>
-                            </div>
-                            <div
-                                class="edit-modal"
-                                :class="{
-                                    notDisplay: index != pageNo || !editOn,
-                                }"
-                            >
-                                <div class="edit-container">
-                                    <div class="title">
-                                        <div class="text">Edit</div>
-                                        <img
-                                            @click="hideEditModal"
-                                            src="../../public/assets/close.svg"
-                                            alt=""
-                                        />
-                                    </div>
-
-                                    <div class="event-name">
-                                        <label for="">Event Name</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.eventName"
-                                        />
-                                    </div>
-                                    <div class="contact-name">
-                                        <label for="">Contact Name</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.contactName"
-                                        />
-                                    </div>
-                                    <div class="phone-number">
-                                        <label for="">Phone Number</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.phoneNumber"
-                                        />
-                                    </div>
-                                    <div class="max-tickets">
-                                        <label for="">Max Tickets</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.maxTickets"
-                                        />
-                                    </div>
-                                    <div class="description">
-                                        <label for="">Description</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.description"
-                                        />
-                                    </div>
-                                    <div class="location">
-                                        <label for="">Location</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.location"
-                                        />
-                                    </div>
-                                    <div class="status">
-                                        <label for="">Status</label>
-                                        <input
-                                            type="text"
-                                            v-model="edit.status"
-                                        />
-                                    </div>
-                                    <div
-                                        class="submit"
-                                        :class="{ notFully: notFilled }"
-                                        @click="makeEdit(index)"
-                                    >
-                                        Submit
-                                    </div>
-                                </div>
-                            </div>
                         </td>
                     </tr>
                 </table>
@@ -414,7 +275,6 @@ export default {
                 });
 
                 this.editOn = false;
-
             }
         },
         showModal() {
