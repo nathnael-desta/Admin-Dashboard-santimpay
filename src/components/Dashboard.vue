@@ -51,7 +51,7 @@ export default {
     props: ["user", "editUser", "addEvent"],
     data() {
       return {
-        tabNo: 2
+        tabNo: 0
       }
     },
     methods: {
