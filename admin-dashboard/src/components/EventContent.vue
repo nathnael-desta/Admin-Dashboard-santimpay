@@ -2,7 +2,10 @@
     <div class="event-content">
         <div class="top">
             <div class="title">Events</div>
-            <div class="create-button">
+            <div
+                class="create-button"
+                @click="showModal"
+            >
                 <img
                     src="../../public/assets/add.svg"
                     alt=""
@@ -198,71 +201,80 @@
                                 </div>
                             </div>
                             <div
-                            class="edit-modal"
-                            :class="{ notDisplay: index != pageNo || !editOn }"
-                        >
-                            <div class="edit-container">
-                                <div class="event-name">
-                                    <label for="">Event Name</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.eventName"
-                                    />
-                                </div>
-                                <div class="contact-name">
-                                    <label for="">Contact Name</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.contactName"
-                                    />
-                                </div>
-                                <div class="phone-number">
-                                    <label for="">Phone Number</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.phoneNumber"
-                                    />
-                                </div>
-                                <div class="max-tickets">
-                                    <label for="">Max Tickets</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.maxTickets"
-                                    />
-                                </div>
-                                <div class="description">
-                                    <label for="">Description</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.description"
-                                    />
-                                </div>
-                                <div class="location">
-                                    <label for="">Location</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.location"
-                                    />
-                                </div>
-                                <div class="status">
-                                    <label for="">Status</label>
-                                    <input
-                                        type="text"
-                                        v-model="edit.status"
-                                    />
-                                </div>
-                                <div
-                                    class="submit"
-                                    :class="{ notFully: notFilled }"
-                                    @click="makeEdit(index)"
-                                >
-                                    Submit
+                                class="edit-modal"
+                                :class="{
+                                    notDisplay: index != pageNo || !editOn,
+                                }"
+                            >
+                                <div class="edit-container">
+                                    <div class="title">
+                                        <div class="text">Edit</div>
+                                        <img
+                                            @click="hideEditModal"
+                                            src="../../public/assets/close.svg"
+                                            alt=""
+                                        />
+                                    </div>
+
+                                    <div class="event-name">
+                                        <label for="">Event Name</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.eventName"
+                                        />
+                                    </div>
+                                    <div class="contact-name">
+                                        <label for="">Contact Name</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.contactName"
+                                        />
+                                    </div>
+                                    <div class="phone-number">
+                                        <label for="">Phone Number</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.phoneNumber"
+                                        />
+                                    </div>
+                                    <div class="max-tickets">
+                                        <label for="">Max Tickets</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.maxTickets"
+                                        />
+                                    </div>
+                                    <div class="description">
+                                        <label for="">Description</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.description"
+                                        />
+                                    </div>
+                                    <div class="location">
+                                        <label for="">Location</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.location"
+                                        />
+                                    </div>
+                                    <div class="status">
+                                        <label for="">Status</label>
+                                        <input
+                                            type="text"
+                                            v-model="edit.status"
+                                        />
+                                    </div>
+                                    <div
+                                        class="submit"
+                                        :class="{ notFully: notFilled }"
+                                        @click="makeEdit(index)"
+                                    >
+                                        Submit
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
                         </td>
-                        
                     </tr>
                 </table>
                 <div class="pages">
@@ -285,39 +297,16 @@
                             />
                         </div>
                         <div
-                            class="page"
-                            @click="changePageNo(0)"
-                            :class="{ selected: pageNo == 0 }"
+                            class="pageNos"
+                            v-for="(page, index) in navArray"
                         >
-                            1
-                        </div>
-                        <div
-                            class="page"
-                            @click="changePageNo(1)"
-                            :class="{ selected: pageNo == 1 }"
-                        >
-                            2
-                        </div>
-                        <div
-                            class="page"
-                            @click="changePageNo(2)"
-                            :class="{ selected: pageNo == 2 }"
-                        >
-                            3
-                        </div>
-                        <div
-                            class="page"
-                            @click="changePageNo(3)"
-                            :class="{ selected: pageNo == 3 }"
-                        >
-                            4
-                        </div>
-                        <div
-                            class="page"
-                            :class="{ selected: pageNo == 4 }"
-                            @click="changePageNo(4)"
-                        >
-                            5
+                            <div
+                                class="page"
+                                @click="changePageNo(index)"
+                                :class="{ selected: pageNo == index }"
+                            >
+                                {{ `${index + 1}` }}
+                            </div>
                         </div>
 
                         <div
@@ -335,130 +324,26 @@
         </div>
     </div>
 
-    <div
-        class="modal"
-        :class="{ notVisible: !modalOn }"
-    >
-        <div class="container">
-            <div class="top">
-                <div class="text">Create New Event</div>
-                <img
-                    src="../../public/assets/close.svg"
-                    alt=""
-                />
-            </div>
-            <div class="middle">
-                <div class="left">
-                    <div class="event-name normal">
-                        <label for="event-name-input">Event Name</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="event-name-input"
-                            placeholder="EG. Bezar Event"
-                        />
-                    </div>
-
-                    <div class="contact-name normal">
-                        <label for="contact-name-input">Contact Name</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="contact-name-input"
-                            placeholder="EG. Abebe Bikila"
-                        />
-                    </div>
-
-                    <div class="phone-number normal">
-                        <label for="phone-number-input">Phone Number</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="phone-number-input"
-                            placeholder="+2519 00000000"
-                        />
-                    </div>
-
-                    <div class="max-tickets normal">
-                        <label for="max-tickets-input">Max Tickets</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="max-tickets-input"
-                            placeholder="EG 1000"
-                        />
-                    </div>
-
-                    <div class="description">
-                        <label for="description-input">Description</label>
-                        <textarea
-                            name=""
-                            id="description-input"
-                            placeholder="Write description"
-                        ></textarea>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="location normal">
-                        <label for="location-input">Event Name</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="location-input"
-                            placeholder="Eg Millennium Hall"
-                        />
-                    </div>
-
-                    <div class="expire-data normal">
-                        <label for="expire-date-input">Expiry Date</label>
-                        <input
-                            type="text"
-                            name=""
-                            id="expire-date-input"
-                            placeholder="Select Date"
-                        />
-                    </div>
-
-                    <div class="event-image normal">
-                        <label for="event-image-input">Event Image</label>
-                        <div class="file-container">
-                            <div class="inner">
-                                <div class="text">Upload File</div>
-                                <div class="select">
-                                    Select a file or drag and drop here
-                                </div>
-                            </div>
-                        </div>
-                        <input
-                            type="file"
-                            name=""
-                            id="event-image-input"
-                            placeholder=""
-                            hidden
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="buttons">
-                    <div class="cancel">Cancel</div>
-                    <div class="create">Create</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <modal
+        :modal-on="modalOn"
+        :hide-modal="hideModal"
+    ></modal>
 </template>
 
 <script>
 import { useAttrs } from "vue";
+import Modal from "./Modal.vue";
 
 export default {
+    components: {
+        Modal,
+    },
     props: ["user", "editUser"],
     data() {
         return {
             clickedOptions: NaN,
-            modalOn: false,
             pageNo: 0,
+            modalOn: false,
             editOn: false,
             edit: {
                 eventName: "",
@@ -485,6 +370,13 @@ export default {
                 !this.edit.location ||
                 !this.edit.status
             );
+        },
+        navArray() {
+            let arr = [];
+            for (let i = 0; i < this.totalNumberOfPages + 1; i++) {
+                arr.push(i);
+            }
+            return arr;
         },
     },
     methods: {
@@ -521,10 +413,20 @@ export default {
                 });
 
                 this.editOn = false;
+                
             }
+        },
+        showModal() {
+            this.modalOn = true;
+        },
+        hideModal() {
+            this.modalOn = false;
         },
         turnEditOn() {
             this.editOn = true;
+        },
+        hideEditModal() {
+            this.editOn = false;
         },
     },
 };
