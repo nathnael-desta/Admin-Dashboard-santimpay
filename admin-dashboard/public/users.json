@@ -3,6 +3,259 @@
    "email" : "abebebikila@gmail.com",
    "phoneNumber": "+251911223344",
    "password": "admin",
-   "name": "Abebe Bikila"
+   "name": "Abebe Bikila",
+   "totalEvents": 135,
+   "eventsActive": 62,
+   "eventsInactive": 23,
+   "totalTickets1": 1567,
+   "tickets1Active": 62,
+   "tickets1Inactive": 23,
+   "totalTickets2": 89,
+   "tickets2Active": 62,
+   "tickets2Inactive": 23,
+   "allTickets": 
+    [
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Tech Conference 2024",
+        "contactName": "John Doe",
+        "phoneNumber": "1234567890",
+        "maxTickets": 500,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Convention Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Art & Craft Expo",
+        "contactName": "Jane Smith",
+        "phoneNumber": "0987654321",
+        "maxTickets": 300,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Art Gallery",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Music Festival",
+        "contactName": "Mike Johnson",
+        "phoneNumber": "1122334455",
+        "maxTickets": 1000,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Open Air Theatre",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Food Carnival",
+        "contactName": "Emily Davis",
+        "phoneNumber": "2233445566",
+        "maxTickets": 750,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "City Park",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Book Fair",
+        "contactName": "Chris Brown",
+        "phoneNumber": "3344556677",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Library Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Startup Pitch Event",
+        "contactName": "Sarah Wilson",
+        "phoneNumber": "4455667788",
+        "maxTickets": 200,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Tech Hub",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Charity Run",
+        "contactName": "David Lee",
+        "phoneNumber": "5566778899",
+        "maxTickets": 1500,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Downtown",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Yoga Workshop",
+        "contactName": "Anna Martinez",
+        "phoneNumber": "6677889900",
+        "maxTickets": 250,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Community Center",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Science Fair",
+        "contactName": "Brian Scott",
+        "phoneNumber": "7788990011",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "University Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Business Meetup",
+        "contactName": "Laura Garcia",
+        "phoneNumber": "8899001122",
+        "maxTickets": 350,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Conference Room A",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Tech Conference 2024",
+        "contactName": "John Doe",
+        "phoneNumber": "1234567890",
+        "maxTickets": 500,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Convention Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Art & Craft Expo",
+        "contactName": "Jane Smith",
+        "phoneNumber": "0987654321",
+        "maxTickets": 300,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Art Gallery",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Music Festival",
+        "contactName": "Mike Johnson",
+        "phoneNumber": "1122334455",
+        "maxTickets": 1000,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Open Air Theatre",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Food Carnival",
+        "contactName": "Emily Davis",
+        "phoneNumber": "2233445566",
+        "maxTickets": 750,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "City Park",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Book Fair",
+        "contactName": "Chris Brown",
+        "phoneNumber": "3344556677",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Library Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Startup Pitch Event",
+        "contactName": "Sarah Wilson",
+        "phoneNumber": "4455667788",
+        "maxTickets": 200,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Tech Hub",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Charity Run",
+        "contactName": "David Lee",
+        "phoneNumber": "5566778899",
+        "maxTickets": 1500,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Downtown",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Yoga Workshop",
+        "contactName": "Anna Martinez",
+        "phoneNumber": "6677889900",
+        "maxTickets": 250,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Community Center",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Science Fair",
+        "contactName": "Brian Scott",
+        "phoneNumber": "7788990011",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "University Hall",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Business Meetup",
+        "contactName": "Laura Garcia",
+        "phoneNumber": "8899001122",
+        "maxTickets": 350,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Conference Room A",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Gaming Convention",
+        "contactName": "Michael Anderson",
+        "phoneNumber": "9900112233",
+        "maxTickets": 800,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Exhibition Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Film Festival",
+        "contactName": "Emma Thompson",
+        "phoneNumber": "1010101010",
+        "maxTickets": 700,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Cinema Hall",
+        "status": "expired"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Health & Wellness Fair",
+        "contactName": "Olivia Taylor",
+        "phoneNumber": "1212121212",
+        "maxTickets": 600,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Fitness Center",
+        "status": "active"
+      },
+      {
+        "image": "./assets/image.svg",
+        "eventName": "Coding Bootcamp",
+        "contactName": "Daniel Harris",
+        "phoneNumber": "1313131313",
+        "maxTickets": 400,
+        "description": "Lorem ipsum dolor sit amet...",
+        "location": "Tech Lab",
+        "status": "expired"
+      }
+    
+   ]
   }
 ]

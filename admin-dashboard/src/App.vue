@@ -5,6 +5,9 @@
       v-if="pageNo == 0"
     ></login-page>
     <dashboard
+      v-if="user"
+      :user="user"
+      :edit-user="editUser"
     ></dashboard>
 </template>
 
@@ -25,12 +28,18 @@ export default {
               accountName: "",
               accountPassword: ""
             },
-            userIndex: NaN,
-            pageNo: 0
+            userIndex: 0,
+            pageNo: 1
         };
     },
     created() {
       this.getPages();
+    },
+    computed: {
+      user() {
+        console.log(this.users[this.userIndex])
+        return this.users[this.userIndex];
+      }
     },
     methods: {
         async getPages() {
@@ -53,6 +62,11 @@ export default {
               this.pageNo = 1;
             }
           })
+        },
+        editUser(index, option) {
+          if (option === "delete") {
+            this.users.splice(index,1);
+          }
         }
     },
 };
