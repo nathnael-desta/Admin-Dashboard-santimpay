@@ -154,7 +154,7 @@
                         <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
                             {{ ticket.location }}
                         </td>
-                        <td v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
+                        <td class="statusDetails" v-if="index >= (pageNo * 5) && index < ((pageNo * 5) + 5)">
                             <span
                                 class="statusactive"
                                 :class="{
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                             <div
-                                class="edit-modal"
+                                class="editModal"
                                 :class="{
                                     notDisplay: index != pageNo || !editOn,
                                 }"
@@ -277,18 +277,18 @@
                         </td>
                     </tr>
                 </table>
-                <div class="pages">
-                    <div class="left">
+                <div class="pagesNav">
+                    <div class="pagesNavLeft">
                         <div class="showing">Showing Page</div>
                         <div class="page-number">{{ pageNo + 1 }}</div>
                         <div class="out-of">
                             Out of {{ totalNumberOfPages + 1 }}
                         </div>
                     </div>
-                    <div class="right">
+                    <div class="pagesNavRight">
                         <div
                             @click="decrease"
-                            class="arrow-container"
+                            class="arrowContainer"
                         >
                         <svg class="arrow" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56603 0.558058C6.83216 0.802136 6.83216 1.19786 6.56603 1.44194L2.07812 5.55806C1.812 5.80214 1.812 6.19786 2.07813 6.44194L6.56603 10.5581C6.83216 10.8021 6.83216 11.1979 6.56603 11.4419C6.29991 11.686 5.86844 11.686 5.60231 11.4419L1.1144 7.32583C0.316033 6.59359 0.316031 5.40641 1.1144 4.67418L5.60231 0.558058C5.86844 0.313981 6.29991 0.313981 6.56603 0.558058Z" fill="#171625"/>
@@ -296,11 +296,11 @@
 
                         </div>
                         <div
-                            class="pageNos"
+                            class="pagesNavPageNos"
                             v-for="(page, index) in navArray"
                         >
                             <div
-                                class="page"
+                                class="pageNavPage"
                                 @click="changePageNo(index)"
                                 :class="{ selected: pageNo == index }"
                             >
@@ -309,7 +309,7 @@
                         </div>
 
                         <div
-                            class="arrow-container"
+                            class="arrowContainer"
                             @click="increase"
                         >
                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -117,10 +117,6 @@ body {
                         font-size: 18px;
                         line-height: 21px;
                         outline: none;
-
-                        &::placeholder {
-                            color: rgba(162, 162, 162, 1);
-                        }
                     }
 
                     .eye-container {
@@ -510,33 +506,6 @@ body {
         display: flex;
         gap: 50px;
 
-        & > div {
-            flex: 1;
-            box-shadow: 0px 4px 20px 0px rgba(170, 169, 184, 0.1);
-            display: flex;
-            flex-direction: column;
-            border-radius: 10px;
-            padding: 17px 32px;
-            gap: 15px;
-
-            .top-ticket {
-                display: flex;
-                gap: 10px;
-
-                .title {
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 18px;
-                }
-            }
-
-            .bottom {
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 42px;
-            }
-        }
-
         .total {
             path {
                 stroke: rgba(211, 175, 53, 1);
@@ -559,6 +528,33 @@ body {
             }
 
             color: rgba(233, 56, 99, 1);
+        }
+    }
+
+    .middle > div {
+        flex: 1;
+        box-shadow: 0px 4px 20px 0px rgba(170, 169, 184, 0.1);
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 17px 32px;
+        gap: 15px;
+
+        .top-ticket {
+            display: flex;
+            gap: 10px;
+
+            .title {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+
+        .bottom {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
         }
     }
 
@@ -617,7 +613,7 @@ body {
                     padding-right: 40px;
                 }
 
-                td:last-child {
+                .statusDetails {
                     display: flex;
                     justify-content: space-between;
                     width: 100px;
@@ -660,15 +656,15 @@ body {
                         z-index: 9;
                         background-color: white;
 
-                        & > div {
-                            display: flex;
-                            gap: 16px;
-                            cursor: pointer;
-                        }
-
                         .delete {
                             color: rgba(233, 56, 99, 1);
                         }
+                    }
+
+                    .options > div {
+                        display: flex;
+                        gap: 16px;
+                        cursor: pointer;
                     }
 
                     .img-container {
@@ -677,92 +673,17 @@ body {
 
                     .clicked {
                         position: relative;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: -5px;
-                            left: -12px;
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 50%;
-                            background-color: rgb(125, 125, 125, 0.5);
-                        }
-                    }
-                }
-            }
-
-            .pages {
-                flex: 1;
-                display: flex;
-                padding: 17px 20px;
-                border-radius: 10px;
-                width: 100%;
-                justify-content: space-between;
-
-                .left {
-                    display: flex;
-                    gap: 20px;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 20px;
-                    align-items: center;
-
-                    & > div {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                     }
 
-                    .page-number {
-                        color: rgba(211, 175, 53, 1);
-                        border: 1px solid rgba(220, 220, 220, 1);
-                        height: 28px;
-                        width: 27px;
-                        border-radius: 3px;
-                    }
-                }
-
-                .right {
-                    display: flex;
-                    align-items: center;
-
-                    .arrow-container {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    .pageNos {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        align-items: center;
-
-                        & > div {
-                            width: 28px;
-                            height: 28px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-
-                        .page {
-                            cursor: pointer;
-                        }
-                    }
-
-                    .selected {
-                        background-color: rgba(211, 175, 53, 0.4);
-                        width: 28px;
-                        height: 28px;
-                        border-radius: 8px;
-                    }
-
-                    .arrow-container {
+                    .clicked::before {
+                        content: "";
+                        position: absolute;
+                        top: -5px;
+                        left: -12px;
                         width: 30px;
                         height: 30px;
-                        cursor: pointer;
+                        border-radius: 50%;
+                        background-color: rgb(125, 125, 125, 0.5);
                     }
                 }
             }
@@ -937,7 +858,7 @@ body {
     }
 }
 
-.edit-modal {
+.editModal {
     position: fixed;
     top: 0;
     left: 0;
@@ -949,72 +870,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    .edit-container {
-        width: 400px;
+.edit-container {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    position: relative;
 
-        background-color: #ffffff;
+    .submit {
+        background-color: rgba(211, 175, 53, 1);
+        padding: 10px 20px;
+        color: #ffffff;
         border-radius: 26px;
         display: flex;
-        flex-direction: column;
-        padding: 30px;
-        gap: 30px;
-        position: relative;
-
-        .title {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-
-            img {
-                cursor: pointer;
-            }
-        }
-
-        & > div {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 16px;
-
-            input {
-                padding: 10px 20px;
-                border: 0.8px solid rgba(153, 153, 153, 1);
-                background-color: rgba(243, 243, 243, 1);
-                border-radius: 40px;
-                outline: none;
-            }
-        }
-
-        .submit {
-            background-color: rgba(211, 175, 53, 1);
-            padding: 10px 20px;
-            color: #ffffff;
-            border-radius: 26px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .notFully {
-            opacity: 0.7;
-            cursor: default;
-        }
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
+
+    .notFully {
+        opacity: 0.7;
+        cursor: default;
+    }
+}
+
+.edit-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.edit-container > div input {
+    padding: 10px 20px;
+    border: 0.8px solid rgba(153, 153, 153, 1);
+    background-color: rgba(243, 243, 243, 1);
+    border-radius: 40px;
+    outline: none;
+}
+
+.edit-container .title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.edit-container .title img {
+    cursor: pointer;
 }
 
 .password-input::placeholder {
     transform: translateY(-4px);
 }
 
-.eye-container {
-    img {
-        width: 25px;
-        height: 25px;
-    }
+.eye-container img {
+    width: 25px;
+    height: 25px;
 }
 
 .colored {
@@ -1068,4 +986,79 @@ body {
     padding: 50px 0;
     display: flex;
     align-items: center;
+}
+
+.pagesNav {
+    flex: 1;
+    display: flex;
+    padding: 17px 20px;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.pagesNavLeft {
+    display: flex;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    align-items: center;
+}
+
+.pagesNavLeft > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-number {
+    color: rgba(211, 175, 53, 1);
+    border: 1px solid rgba(220, 220, 220, 1);
+    height: 28px;
+    width: 27px;
+    border-radius: 3px;
+}
+
+.pagesNavRight {
+    display: flex;
+    align-items: center;
+}
+
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagesNavPageNos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.pagesNavPageNos > div {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNavPage {
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgba(211, 175, 53, 0.4);
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+}
+
+.arrowContainer {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
