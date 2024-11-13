@@ -102,9 +102,9 @@
                 <div class="bottom">{{ user.eventsInactive }}</div>
             </div>
         </div>
-        <div class="bottom">
-            <div class="title">All Events</div>
-            <div class="table">
+        <div class="bottomTableHolder">
+            <div class="bottomTitle">All Events</div>
+            <div class="dataTable">
                 <table class="table-container">
                     <tr class="columns">
                         <th>Image</th>

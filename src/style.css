@@ -557,138 +557,143 @@ body {
             line-height: 42px;
         }
     }
+}
 
-    .bottom {
-        flex: 6.8;
-        display: flex;
-        flex-direction: column;
+.bottomTableHolder {
+    flex: 6.8;
+    display: flex;
+    flex-direction: column;
+}
 
-        .title {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 26px;
-        }
+.bottomtitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+}
 
-        .table {
-            flex: 5.67;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
+.dataTable {
+    flex: 5.67;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 
-            .table-container {
-                flex: 6.5;
-                border: 1px solid rgba(235, 234, 234, 1);
-                border-radius: 20px;
-                width: 100%;
-                height: 100%;
-                border-collapse: collapse;
+}
 
-                td {
-                    text-align: center;
-                    vertical-align: center;
-                    font-weight: 500;
-                    size: 14px;
-                    line-height: 22px;
-                }
+.table-container {
+    flex: 6.5;
+    border: 1px solid rgba(235, 234, 234, 1);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
 
-                tr:nth-child(even) {
-                    background-color: rgba(241, 241, 241, 1);
-                }
-                tr:nth-child(odd) {
-                    background-color: #ffffff;
-                }
+}
 
-                th {
-                    padding: 10px;
-                    font-weight: 600;
-                    font-size: 14px;
-                    line-height: 16px;
-                    color: rgba(154, 154, 158, 1);
-                }
+.table-container td {
+    text-align: center;
+    vertical-align: center;
+    font-weight: 500;
+    size: 14px;
+    line-height: 22px;
+}
+ 
+.table-container tr:nth-child(even) {
+    background-color: rgba(241, 241, 241, 1);
+}
 
-                th:last-child {
-                    padding-right: 40px;
-                }
+.table-container tr:nth-child(odd) {
+    background-color: #ffffff;
+}
 
-                .statusDetails {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100px;
-                    align-items: center;
-                    height: 100%;
-                    position: relative;
+.table-container th {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(154, 154, 158, 1);
+}
 
-                    .statusactive {
-                        padding: 4px 12px;
-                        background-color: rgba(15, 185, 87, 0.2);
-                        color: rgba(15, 185, 87, 1);
-                        border-radius: 99px;
-                        position: relative;
-                        z-index: 1;
-                    }
+.table-container th:last-child {
+    padding-right: 40px;
+}
 
-                    .statusexpired {
-                        padding: 4px 12px;
-                        background-color: rgba(233, 56, 99, 0.2);
-                        color: rgba(233, 56, 99, 1);
-                        border-radius: 99px;
-                        position: relative;
-                        z-index: 1;
-                    }
+.table-container .statusDetails {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    align-items: center;
+    height: 100%;
+    position: relative;
 
-                    .options {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
-                        border-radius: 10px;
-                        border: 1px solid rgba(194, 194, 194, 1);
-                        padding: 14px 20px;
-                        box-shadow: 0px 4px 26.2px 0px rgba(0, 0, 0, 0.25);
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 20px;
-                        position: absolute;
-                        right: -20px;
-                        bottom: -65px;
-                        z-index: 9;
-                        background-color: white;
+}
 
-                        .delete {
-                            color: rgba(233, 56, 99, 1);
-                        }
-                    }
+.table-container .statusDetails .statusactive {
+    padding: 4px 12px;
+    background-color: rgba(15, 185, 87, 0.2);
+    color: rgba(15, 185, 87, 1);
+    border-radius: 99px;
+    position: relative;
+    z-index: 1;
+}
 
-                    .options > div {
-                        display: flex;
-                        gap: 16px;
-                        cursor: pointer;
-                    }
+.table-container .statusDetails .statusexpired {
+    padding: 4px 12px;
+    background-color: rgba(233, 56, 99, 0.2);
+    color: rgba(233, 56, 99, 1);
+    border-radius: 99px;
+    position: relative;
+    z-index: 1;
+}
 
-                    .img-container {
-                        cursor: pointer;
-                    }
+.table-container .statusDetails .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(194, 194, 194, 1);
+    padding: 14px 20px;
+    box-shadow: 0px 4px 26.2px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    right: -20px;
+    bottom: -65px;
+    z-index: 9;
+    background-color: white;
 
-                    .clicked {
-                        position: relative;
-                    }
+}
 
-                    .clicked::before {
-                        content: "";
-                        position: absolute;
-                        top: -5px;
-                        left: -12px;
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 50%;
-                        background-color: rgb(125, 125, 125, 0.5);
-                    }
-                }
-            }
-        }
-    }
+.table-container .statusDetails .options .delete {
+    color: rgba(233, 56, 99, 1);
+}
+
+.table-container .statusDetails .options > div {
+    display: flex;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.table-container .statusDetails .img-container {
+    cursor: pointer;
+}
+
+.table-container .statusDetails .clicked {
+    position: relative;
+}
+
+.table-container .statusDetails .clicked::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(125, 125, 125, 0.5);
 }
 
 .modal {
@@ -955,7 +960,7 @@ body {
         visibility: hidden;
         position: absolute;
         width: 340px;
-        background-color: rgba(180, 180, 180, 0.452);
+        background-color: rgb(180, 180, 180);
         border-radius: 15px;
         left: -150px;
         top: 20px;
